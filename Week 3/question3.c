@@ -17,6 +17,12 @@ int main(){
         if(str[i] != ' '){
             val = (int) str[i];
             val += key;
+            if(val > 122){
+                val -= 26;
+            }
+            else if (val > 90 && val < 122){
+                val -= 26;
+            }
             str[i] = (char) val;
         }
         i += 1;
