@@ -14,10 +14,11 @@ double findexp(double n, double x, double lastterm, double sum){
 }
 
 int main(){
-    int x,n;
+    int x,n,absx;
     double ans;
     printf("Enter X value: ");
     scanf("%d",&x);
+    absx = x<0?-x:x;
     ans = findexp(1,x,1.0,1.0);
     printf("My value: %e\n",ans);
     printf("math.h value: %e",exp(x));
